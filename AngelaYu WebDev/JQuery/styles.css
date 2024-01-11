@@ -1,0 +1,17 @@
+.big-title{
+  font-size: 7rem;
+  color: blueviolet;
+  font-family : 'cursive', sans-serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}

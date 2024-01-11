@@ -1,0 +1,18 @@
+.container{
+    background-color: #280c49;
+}
+.btn{
+    border-radius: 5px;
+    border-color: #512B81;
+    box-shadow: inset;
+}
+html{
+    background-color: black;
+}
+.logo{
+    height: 3rem;
+    margin-right: 10%;
+}
+.text{
+    color: #CAE5FC;
+}

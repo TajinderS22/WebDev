@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(212, 188, 227) ;
+    text-align: center;
+    font-size: 1.3rem;
+    
+}
+div{
+    margin-top: 5%;
+}
+.profile{
+    position: relative;
+    top: 20px;
+    height: 150px;
+    border-radius: 15%;
+    justify-content: center;
+    margin-bottom: 40px;
+}
