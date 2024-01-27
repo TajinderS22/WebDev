@@ -1,0 +1,103 @@
+body{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    
+}
+.container{
+    width: 100%;
+}
+.title{
+    background-color: rgb(239, 252, 196);
+    margin: 1.5%;
+    border-radius: 10px;
+    font-size: 20em;
+}
+.date{
+    background-color: rgb(194, 213, 252);
+    border-radius: 10px;
+    margin: 1.5%;
+
+}
+.intro{
+    display: flex;
+    justify-content:center;
+    font-size: 2em;
+}
+.TaskArea{
+    height: 100vh;
+    display:grid;
+    justify-content: center;
+    width: 100%;
+}
+.list{
+    display: flex;
+    margin: 10px;
+    background-color: rgb(246, 217, 217);
+    border-radius: 10px;
+    justify-content: space-between;
+    font-size: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50vh;
+
+
+}
+span:hover{
+    cursor: pointer;
+    background-color: rgb(127, 127, 127);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 5px;
+    
+}
+.inputArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    flex: 1;
+    height: 1.4em;
+    width: 70%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding :5%;
+    margin : 2%
+
+}
+@media screen { 
+    .TaskArea{
+        height: 70vh;
+        display:grid;
+        justify-content: center;
+        width: 100%;
+    }
+    body{
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+       
+    }
+    .inputArea{
+        margin-left: 10%;
+    }
+    
+}
+img{
+    margin-top: 1.3%;
+    height: 20px;
+    width: 20px;
+}
+.checked{
+    text-decoration: line-through;
+    color: rgb(127, 127, 127);
+}
