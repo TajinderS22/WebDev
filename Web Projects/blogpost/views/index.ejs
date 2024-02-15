@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <section class="navbar-container container ">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <h2 class="big-text"> 
+                    Blogpost
+                </h2>
+            </div>
+            <div class="nav-links">
+                <ul class="nav-ul-links">
+                    <li class="nav-ul-li">HOME</li>
+                    <li class="nav-ul-li">CONTACT</li>
+                    <li class="nav-ul-li">ABOUT</li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    
+<% if (locals.data){ %>
+    <section class="container contentbox">
+        <h3 id="blog-title"><%= blogTitle %></h3>
+        <div class="main-container">
+        <section class="container-1">
+           <p class="main-container-1"><%= blogContent %></p>
+        </section>
+        <section class="container-2">
+            <p class="side-container  ">
+               
+                <ul>
+                    <li class="side-panel"><%= blogName %></li>
+                    
+                </ul>
+            </p>
+<% }else{ %>
+
+        <h1>no data</h1>
+<% } %>
+        </section>
+        </div>
+    </section>
+
+    
+
+
+    
+    
+</body>
+
+
+<footer class="footer container-fluid ">
+    copyright &#169; Tajinder Singh
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+</html>
