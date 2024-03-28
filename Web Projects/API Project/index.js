@@ -1,38 +1,72 @@
-import express, { request } from 'express';
+import express from 'express';
+import bodyParser from 'body-parser';
 import axios from 'axios';
+import ejs from 'ejs';
 
 
-const app =express();
+const port =3000;
+const app=express();
+app.use(express.static('public'));
 
-const port=3000;
 
-app.get('/',(req,res)=>{
-    let response = null;
-    console.log(req);
+let BTC,ETH,SOL;
 
-new Promise(async (resolve, reject) => {
+app.set('view engine','ejs');
+
+
+
+
+
+
+app.get('/',async (req,res)=>{
   try {
-    response = await axios.get('', {
-      headers: {
-        'X-CMC_PRO_API_KEY': '9bbd70c5-cbf6-4f12-88d9-ef869caa1605',
-      },
+
+    let response =await axios.get('https://api-pub.bitfinex.com/v2/tickers?symbols=ALL',{
+      headers:{accept:'application/json'}
+    })
+    let result=response.data;
+    let BTCUSDT , ETHUSDT , SOLUSDT;
+    for(let i=0;i<result.length;i++){
+      if (result[i][0]=='tBTCUSD'){
+        BTCUSDT=result[i][7];
+      }
+      else if (result[i][0]=='tETHUSD')
+      {
+        ETHUSDT=result[i][7];
+      }
+      else if (result[i][0]=='tSOLUSD')
+      {
+        SOLUSDT=result[i][7];
+      }
+    }
+    console.log(BTCUSDT);
+
+    res.render('index.ejs',{
+      BTCUSDT,
+      ETHUSDT, 
+      SOLUSDT
+    })
+
+      // let weather = await axios.get('https://api.weatherapi.com/v1/forecast.json?key=e136f9519de64f9d98d182911242703&q=amritsar&days=3&aqi=no&alerts=no');
+      // console.log(weather.data);
+      // let W=weatherResponse.data;
+      // console.log(W)
       
-    });
-  } catch(ex) {
-    response = null;
-    // error
-    console.log(ex);
-    reject(ex);
-  }
-  if (response) {
-    // success
-    const json = response.data;
-    console.log(json);
-    resolve(json);
-  }
-});
+      // let WeatherIcon=W.current.condition.icon;
+      // let wTxt=W.current.condition.text;
+      // let temp=W.current.temp_c;
+      // let tomIcon=W.forcast.forcastday[1].condition.icon;
+      // let tomTxt=W.forcast.forcastday[1].condition.text;
+      // console.log(WeatherIcon);
+    } catch (error) {
+      console.log(error);
+    }
+
+
+
 })
-console.log(request);
+
+
 app.listen(port,()=>{
-    console.log(`server is running on port ${port}.`)
+  console.log(`server is running on port ${port}.`);
 })

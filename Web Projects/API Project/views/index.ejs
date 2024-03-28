@@ -1,0 +1,64 @@
+<%- include('partials/header.ejs') %>
+<% if (locals){ %>
+<body>
+
+    <nav >
+        <ul>
+            <div>
+                <li class="logo" >logo</li>
+            </div>
+            <div>
+                <li>Crypto</li>
+                <li>Weather</li>
+                <!-- <li><a href="#Extra">Extra</a></li> -->
+            </div>
+        </ul>
+    </nav>
+    
+
+    <h2>Crypto Data</h2>
+    <container>
+        <section class="Crypto" id="display-block">
+            <div>
+                <p>BTCUSD</p>
+                <p> <%= BTCUSDT %> </p>
+            </div>
+            <div>
+                <p>ETHUSD</p>
+                <p> <%= ETHUSDT %> </p>
+            </div>
+            <div>
+                <p>SOLUSD</p>
+                <p> <%= SOLUSDT %> </p>
+            </div>
+            
+
+        </section>
+    </container>
+
+    <h2>Weather Data</h2>
+    <container>
+        <section class="display-block">
+            <div>
+                <p>Today</p>
+
+            </div>
+            <div>
+                <p>Today</p>
+                
+            </div>
+            <div>
+                <p>Tomorrow</p>
+
+            </div>
+            
+        </section>
+    </container>
+    
+
+<% } else{ %>
+    <h1> sorry 200</h1>
+<% } %> 
+    
+</body>
+</html>

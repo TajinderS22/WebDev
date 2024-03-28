@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    background-color: rgb(241, 254, 255);
+    text-align: center;
+    
+}
+h2{
+    display: inline-block;
+    background-color: rgb(147, 211, 179);
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+nav>ul>div>li{
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+    padding-right: 20px;
+}
+nav>ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+nav>ul>div{
+    display: flex;
+}
+nav{
+    background-color: rgb(175, 240, 138);
+    border-radius: 5px;
+    padding-right:20px ;
+    padding-right: 70px;
+    margin: 10px;
+}
+.logo{
+    padding-left: 20px;
+}
+.Crypto>div{
+    background-color: rgb(255, 220, 175);
+    height: 20vh;
+    width: 20%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather>div{
+    background-color: rgb(133, 214, 206);
+    height: 20vh;
+    width: 20%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    display: flex;
+    justify-content: space-evenly;
+    padding :40px;
+}
+#display-block>div{
+    display: flex;
+    flex-direction: column;
+}
+#display-block>div>p{
+    padding :5px;
+}
