@@ -9,19 +9,103 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //1. GET a random joke
 
+app.get("/random",(req,res)=>{
+  let randomJoke=jokes[Math.floor(Math.random()*jokes.length)];
+  res.json(randomJoke);
+})
+
 //2. GET a specific joke
+
+
+
+app.get(`/jokes/:id`, (req,res)=>{
+  let id =parseInt(req.params.id);
+  console.log(id);  
+  let joke;
+    for (let i=0;i<jokes.length;i++){
+      if(jokes[i].id=== id){
+        joke = jokes[i];
+      }
+    }
+  console.log(joke);
+  res.json(joke);
+})
 
 //3. GET a jokes by filtering on the joke type
 
+app.get('/filter',(req,res)=>{
+  let jType=req.query.type;
+  let filterjoke= jokes.filter((joke)=>joke.jokeType === jType);
+
+  res.json(filterjoke);
+})
+
 //4. POST a new joke
+app.post( '/jokes',(req,res)=>{
+  let newJoke={
+    id:jokes.length+1,
+    jokeText:req.body.text,
+    jokeType:req.body.type
+  
+  };
+  jokes.push(newJoke);
+  res.json(newJoke);
+  
+
+})
 
 //5. PUT a joke
-
+app.put("/jokes/:id",(req,res)=>{
+  const id =parseInt(req.params.id);
+  const update={
+    id: id,
+    jokeText:req.body.text,
+    jokeType:req.body.type
+  };
+  // tasks[id-1]=update;
+  const searchindex = jokes.findIndex((joke)=> joke.id === id);
+  jokes[searchindex]=update;
+  res.json(update);
+  console.log(update);
+})
 //6. PATCH a joke
+app.patch("/jokes/:id",(req,res)=>{
+  const id =parseInt(req.params.id);
+  let nochange =jokes.find((joke)=> joke.id ===id);
+
+
+  const update={
+    id: id,
+    jokeText:req.body.text || nochange.jokeText,
+    jokeType:req.body.type || nochange.jokeType
+  };
+  // tasks[id-1]=update;
+  const searchindex = jokes.findIndex((joke)=> joke.id === id);
+  jokes[searchindex]=update;
+  res.json(jokes[searchindex]);
+  console.log(update);
+})
 
 //7. DELETE Specific joke
+app.delete("/jokes/:id",(req,res)=>{
+  const id =parseInt(req.params.id);
+  const searchindex = jokes.findIndex((joke)=> joke.id === id);
+  jokes.splice(searchindex,1);
+  res.send(200);
+})
 
 //8. DELETE All jokes
+app.delete("/all",(req,res)=>{
+  const key = req.query.key;
+  if(key === masterKey){
+    jokes=[];
+    res.sendStatus(200);
+  }
+  else{
+    res.sendStatus(404);
+    res.send("You are not authorised person to perform this operation.please contact the admin.");
+  }
+})
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
