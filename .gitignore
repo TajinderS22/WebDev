@@ -6,6 +6,10 @@ settings.json
 #cppfiles 
 *.cpp
 
+#video files
+*.mp4
+*.mp3
+
 #allzips
 *.zip
 
