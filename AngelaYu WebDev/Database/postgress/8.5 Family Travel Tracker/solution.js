@@ -6,10 +6,10 @@ const app = express();
 const port = 3000;
 
 const db = new pg.Client({
-  user: "postgres",
+  user: "tajinder",
   host: "localhost",
   database: "world",
-  password: "123456",
+  password: "kawal9646",
   port: 5432,
 });
 db.connect();
@@ -49,7 +49,7 @@ app.get("/", async (req, res) => {
     countries: countries,
     total: countries.length,
     users: users,
-    color: currentUser.color,
+    color: currentUser.colour,
   });
 });
 app.post("/add", async (req, res) => {
