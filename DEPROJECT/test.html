@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logic Gates Simulation</title>
+</head>
+<body>
+  <h1>Logic Gates Simulation</h1>
+
+  <div>
+    <h2>AND Gate</h2>
+    <label for="input1">Input 1: </label>
+    <input type="checkbox" id="input1">
+    <label for="input2">Input 2: </label>
+    <input type="checkbox" id="input2">
+    <p>Output: <span id="and-output"></span></p>
+  </div>
+
+  <div>
+    <h2>OR Gate</h2>
+    <label for="input3">Input 1: </label>
+    <input type="checkbox" id="input3">
+    <label for="input4">Input 2: </label>
+    <input type="checkbox" id="input4">
+    <p>Output: <span id="or-output"></span></p>
+  </div>
+
+  <div>
+    <h2>NOT Gate</h2>
+    <label for="input5">Input: </label>
+    <input type="checkbox" id="input5">
+    <p>Output: <span id="not-output"></span></p>
+  </div>
+
+  <script>
+    function updateAND() {
+      const input1 = document.getElementById('input1').checked;
+      const input2 = document.getElementById('input2').checked;
+      const output = input1 && input2;
+      document.getElementById('and-output').textContent = output.toString();
+    }
+
+    function updateOR() {
+      const input3 = document.getElementById('input3').checked;
+      const input4 = document.getElementById('input4').checked;
+      const output = input3 || input4;
+      document.getElementById('or-output').textContent = output.toString();
+    }
+
+    function updateNOT() {
+      const input5 = document.getElementById('input5').checked;
+      const output = !input5;
+      document.getElementById('not-output').textContent = output.toString();
+    }
+
+    document.querySelectorAll('input[type="checkbox"]').forEach(function(input) {
+      input.addEventListener('change', function() {
+        updateAND();
+        updateOR();
+        updateNOT();
+      });
+    });
+  </script>
+</body>
+</html>
