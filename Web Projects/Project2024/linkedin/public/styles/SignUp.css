@@ -1,0 +1,111 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: rgb(230, 230, 230);
+    min-height: 95vh;
+}
+.input-container{
+    margin-top: 0%;
+    border-radius: 10px;
+    background-color: white;
+    height: 5   00px;
+    padding: 20px;
+    width:  35%;
+}
+.input-container-labels{
+    margin: 10px;
+    
+}
+.vertical-flex-1{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 100%;
+}
+.input-placeholder{
+    width: 90%;
+    height:35px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: rgb(125, 106, 179) 1px solid;
+    padding: 5px;
+}
+.input-container-buttons{
+    margin-top: 30px;
+    background-color: rgb(150, 111, 255);
+    padding: 10px;
+    width: 100%;
+    border-radius: 100px;
+    box-shadow: 5px 5px 1px rgb(44, 0, 115);
+
+    strong{
+        color: rgb(255, 255, 255);
+        font-size: 1.2em;
+        text-shadow: 5px 5px 3px rgb(19, 19, 19);
+    }
+    margin-bottom: 20px;
+}
+.tandc{ 
+    width: 100%;
+    margin-top: 10px;
+
+}
+.input-container-google{
+    margin-top: 30px;
+    background-color: rgb(156, 189, 255);
+    padding: 10px;
+    width: 90%;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 1px rgb(44, 0, 115);
+    strong{
+        div{
+            p{
+                margin: 0px;
+                margin-left: 10px;
+                
+            }
+        }
+    }
+
+}
+
+footer{
+    background-color: rgb(203, 216, 219);
+}
+
+.form-input-container{
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height: 600px;
+    border-radius: 10px;
+    padding-top: 80px;
+}
+.data-input-container{
+    width: 80%;
+    height: 80%;
+}
+
+.input-divisions{
+    align-items: flex-start;
+    height: 120px;
+    label{
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    input{
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: rgb(125, 106, 179) 1px solid;
+        padding: 5px;
+    }
+}
+.profile-welcome{
+    padding: 50px 100px 5px 100px;
+}
+

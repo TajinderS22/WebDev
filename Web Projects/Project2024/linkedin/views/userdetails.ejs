@@ -1,0 +1,56 @@
+<%- include('header.ejs') %>
+
+    <div class="form-container vertical-flex container-sm">
+
+        <div><p class="very-large-text profile-welcome">
+            plesae tell us About yourself to optimize your experience on MakeLinks
+        </p></div>
+
+        <form action="/profile" method="post" class="vertical-flex form-input-container space-between">
+
+            <div class="horizontal-flex center space-between data-input-container">
+                <div class="vertical-flex input-divisions ">
+                    <label for="Designation"><strong> Designation </strong></label>
+                    <input type="text" name="Designation">
+                </div>
+                <div class="vertical-flex  input-divisions ">
+                    <label for=" address "><strong> Location </strong></label>
+                    <input type="text" name="address">
+                </div>
+            </div>
+            <div class="horizontal-flex center space-between data-input-container">
+                <div class="vertical-flex  input-divisions ">
+                    <label for="  education "> <strong> School </strong></label>
+                    <input type="text" name="education">
+                </div>
+                <div class="vertical-flex  input-divisions ">
+                    <label for="Gender"><strong>Gender </strong></label>
+                    <input type="text" name="Gender">
+                </div>
+            </div>
+            <div class="horizontal-flex center space-between data-input-container">
+                <div class="vertical-flex  input-divisions">
+                    <label for="Skills"><strong>Skills </strong></label>
+                    <input type="text" name="Skills">
+                </div>
+                <div class="vertical-flex  input-divisions">
+                    <label for="Name"><strong>Name </strong></label>
+                    <input type="text" name="Name">
+                </div>
+                
+            </div>
+
+            <button type="submit" class="input-container-buttons" style="width: 80%; margin-bottom: 100px;"> Submit</button>
+
+
+
+        </form>
+    </div>
+
+
+    </section>
+    
+</body>
+
+<%- include('footer.ejs') %>
+</html>

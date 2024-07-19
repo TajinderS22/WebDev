@@ -1,0 +1,158 @@
+body>*{
+    padding: 0px;
+    margin: 0px;
+    min-height: auto;
+    height: fit-content;
+    
+}
+footer{
+    height: 60px;
+}
+
+.light-text{
+    color: grey;
+}
+.small-text{
+    font-size: 0.8em;
+}
+.large-text{
+    font-size: 1.2em;
+}
+.nav{
+    margin-top: 10px;
+    padding-right: 5%;
+}
+#main{
+    padding: 0px 20px 10px 20px;
+    margin: 0px 10px 0px 10px;
+    min-height: 95vh;
+}
+.horizontal-flex{
+    display: flex;
+    align-items: center;
+
+}
+.center{
+    justify-content: center;
+
+}
+
+.vertical-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon{
+    height: 20px;
+    width: 20px;
+}
+.logo>img{
+    height: 2em;
+}
+.logo{
+    margin-left: 5px ;
+}
+.logo-text{
+    font-size: 2em;
+    margin: 0px;
+    color: rgb(125, 106, 179);
+    h4{
+        margin: 0px;
+    }
+
+}
+.space-between{
+    justify-content: space-between;
+}
+.space-around{
+    justify-content: space-around;
+}
+.container-1{
+    width: 45%;
+}
+.vline{
+    padding-right:20px ;
+    border-right: 1px solid grey;
+}
+.links{
+    
+}
+
+.MakeLinks{
+    width: 20%;
+    padding-left: 5%;
+}
+.link-width{
+    width: 80px;
+}
+.login-options{
+    width: 100%;
+    padding-left: 20px;
+    div{
+        
+        padding: 15px;
+    }
+  
+}
+.SignUp{
+    margin-left: 10px;
+    border: 1px solid rgb(162, 132, 197);
+    border-radius: 25px;
+}
+.very-large-text{
+    font-size: 2.5em;
+    color: rgb(65, 0, 243);
+    font-weight: 300;
+}
+.welcome{
+    width: 40%;
+    padding-left: 5% ;
+    padding-right: 5%;
+    height: 40vh;
+}
+.welcome-container{
+    margin-top: 20px;
+}
+.welcome-text{
+    height: 45%;
+}
+.welcome-image{
+    position: relative;;
+    margin: 0px;
+    height: 40em;
+}
+.welcome-image-container{
+    width: 50%;
+}
+.blue{
+    color: rgb(65, 0, 243);
+}
+.login-buttons{
+    height: 40px;
+    border: 1px solid rgb(65, 0, 243);
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    p{
+        padding: 5px;
+        margin: 0px;
+    }
+}
+.google-container{
+    width: 100%;
+    
+}
+
+.terms{
+    width: 70%;
+}
+.remove-ref-decoration-blue{
+    text-decoration: none;
+    color: rgb(65, 0, 243);
+}
+.remove-ref-decoration{
+    text-decoration: none;
+    color: rgb(25, 34, 34);
+}

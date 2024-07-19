@@ -6,6 +6,7 @@
 }
 body{
     background-color: rgb(236, 236, 236);
+    padding: 0px 10% 0px 10%;
 }
 #navbar{
     background-color: white;
@@ -13,7 +14,9 @@ body{
     align-items: center;
     padding : 0px;
     margin: 0px;
-    position: relative;}
+    position: absolute;
+    
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -76,7 +79,7 @@ form {
   input[type="search"]::placeholder {
     color: #bbb;
   }
-  button[type="submit"] {
+  .search-button {
     text-indent: -999px;
     overflow: hidden;
     width: 40px;
@@ -107,7 +110,11 @@ input[type="search"]:focus {
     display: flex;
     justify-content: space-between;
     padding: 0px;
-    margin-top: 25px;    
+    margin-top: 40px; 
+    padding-top: 40px;
+    
+       
+    
  }
  .content-holder>div{
     margin :0px;
@@ -124,13 +131,13 @@ input[type="search"]:focus {
 .user-details{
     margin :0px;
     margin-left: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-right: 4px;
 }
-.section-1,.section-3{
+.section-1{
     margin-left: 0px;
     display:flex;
-    width: 20%;
+    width: 18%;
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
@@ -193,9 +200,10 @@ input[type="search"]:focus {
 }
 .user-school{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin: 8px;
+    height: 30px;
+    margin: 15px 2px 8px 8px;
     
 }
 .username{
@@ -263,8 +271,8 @@ hr{
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
-    background-color: white;
     height: fit-content;
+    position: relative;
 }
 .profile-photo{
     border-radius: 50%;
@@ -286,8 +294,15 @@ hr{
 
 .horizontal-flex{
     display: flex;
+    align-items: center;
+
+}
+.space-between{
     justify-content: space-between;
-    margin: 10px;
+
+}
+.center{
+    justify-content: center;
 
 }
 .vertical-flex{
@@ -297,6 +312,60 @@ hr{
     margin: 10px;
     align-items: center;
 
+}
+.make-post{
+    margin-left: 0px;
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    height: fit-content;
+    
+
+}
+.card{
+    margin-left: 0px;
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    height: fit-content;
+    margin-bottom: 10px;
+    
+
+}
+.post-user-data{
+    width: 90%;
+    p{
+        margin: 0px;
+    }
+}
+.post-content{
+    margin: 0px 20px 0px 20px ;
+    p{
+        margin-bottom: 10px;
+    
+    }
+}
+.post-photo>img{
+    width: 100%;
+}
+.interactions{
+    margin: 5px 20px 5px 20px;
+    height: 3.5vh;
+    padding-left: 5%;
+    div{
+        min-width: 100px;
+        width: max-content;
+        a{
+            width: 100%;
+        }
+    }
+    
 }
 
 
@@ -313,12 +382,44 @@ hr{
     justify-content: center;
     border-radius: 10px;
     background-color: white;
-    height: fit-content;
+    height: 400px;
+}
+.news-section-1{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0%;
+    margin-top:10px ;
+    padding: 2px 0px 0px 20px;
+}
+.news-section-1>p{
+    margin: 0px;
+    padding: 0px;
 }
 
+.text-big{
+    font-size: large;
+    ;
+}
+.news-articles{
 
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.news-article-time{
+    font-size: 0.8em;
+    color: grey;
+    margin-left: 2px;
+}
+.remove-ref-decoration{
+    text-decoration: none;
+    color: rgb(25, 34, 34);
+}
 
-
+.background-theme{
+    background-color: rgb(210, 168, 255)
+}
 
 
 
